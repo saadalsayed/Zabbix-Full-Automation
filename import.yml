@@ -1,0 +1,14 @@
+---
+- name: import
+  hosts: zabbix_server
+  tasks:
+  - name: Import Zabbix templates from XML
+    local_action:
+      module: zabbix_template
+      server_url: http://10.201.11.7/zabbix 
+      login_user: Admin
+      login_password: zabbix
+      template_xml: "{{ lookup('file', 'template') }}"
+      state: present
+ 
+...
