@@ -1,21 +1,10 @@
-#!/bin/bash
-clear;
-echo "Please Enter Item Name";
-read item_name;
-
-
-echo "Please Enter Key Name";
-read key_name; 
-
-now=$(date +"%Y%m%d");
-
-item="
+ 
 <item>
-                    <name>$item_name</name>
+                    <name>saad</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>$key_name</key>
+                    <key>saad</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
@@ -47,17 +36,4 @@ item="
                     <jmx_endpoint/>
                     <master_item/>
 </item>
-";
-
-
-if  grep  "$item_name" template  ; then
- 	 echo "This Item is already Created";
-else
- 	echo " $item " > item_file;
-        cp -r template  backup-template/item/$now-$item_name; #backupfile
-	 echo " $item " > logs/item/$now-$item_name;  #logfile
- 	sed -i 21ritem_file  template;
-	echo "
-		Item Has been added to Template File
-  		      Please run import.yml";
-fi
+ 

@@ -1,18 +1,6 @@
-#!/bin/bash
-clear;
-echo "Please enter Graph Name"
-read graph_name;
-
-
-echo "Please enter the key Name"
-read key_name;
-
-now=$(date +"%Y%m%d");
-
-
-graph="
+ 
 <graph>
-            <name>$graph_name</name>
+            <name>koka</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -38,21 +26,9 @@ graph="
                     <type>0</type>
                     <item>
                         <host>test</host>
-                        <key>$key_name</key>
+                        <key>baba</key>
                     </item>
                 </graph_item>
             </graph_items>
 </graph>
-";
-if  grep  "graph_name" template  ; then
-         echo "This Item is already Created";
-else
-        echo " $graph" > graph_file;
-         cp -r template  backup-template/graph/$now-$graph_name; #backupfile
-  	echo " $graph" > logs/graphs/$now-$graph_name; #logfile 
-        sed -i  -e'/^<graphs>/ { r graph_file' -e '; :L; n; bL;}'  template;
-        echo "
-		Graph Has been added to Template File
-	              Please Run impot.yml";
-fi
 

@@ -1,6 +1,6 @@
 ---
 - name: import
-  hosts: zabbix_server
+  hosts: zabbix-server
   tasks:
   - name: Import Zabbix templates from XML
     local_action:
