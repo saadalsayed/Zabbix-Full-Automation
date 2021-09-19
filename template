@@ -19,6 +19,7 @@
             </groups>
             <applications/>
             <items>
+<<<<<<< HEAD
  
 <item>
                     <name>refused service</name>
@@ -527,6 +528,8 @@
                     <master_item/>
 </item>
  
+=======
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
 
 <item>
                     <name>hello</name>
@@ -733,6 +736,7 @@
             <screens/>
         </template>
     </templates>
+<<<<<<< HEAD
 
 <triggers>
  
@@ -915,6 +919,11 @@
  
 <graph>
             <name>script graph</name>
+=======
+<graphs>
+     <graph>
+            <name>test_graph</name>
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -931,6 +940,7 @@
             <ymin_item_1>0</ymin_item_1>
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
+<<<<<<< HEAD
 		 
               <graph_item>
                     <sortorder>0</sortorder>
@@ -950,11 +960,18 @@
                     <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
                     <color>BB0000</color>
+=======
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>test</host>
+<<<<<<< HEAD
                         <key>curr_trans_refused_script_service</key>
                     </item>
                </graph_item>
@@ -965,6 +982,15 @@
  
 <graph>
             <name>kokokok</name>
+=======
+                        <key>curr_trans_accepted_PostPaid_ElBehaira_Payment</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>test grapg frpm ansible</name>
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -981,6 +1007,7 @@
             <ymin_item_1>0</ymin_item_1>
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
+<<<<<<< HEAD
 		 
               <graph_item>
                     <sortorder>0</sortorder>
@@ -1000,11 +1027,18 @@
                     <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
                     <color>00AA00</color>
+=======
+                <graph_item>
+                    <sortorder>0</sortorder>
+                    <drawtype>0</drawtype>
+                    <color>1A7C11</color>
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>test</host>
+<<<<<<< HEAD
                         <key>curr_trans_refused_sdfg</key>
                     </item>
                </graph_item>
@@ -1014,5 +1048,12 @@
 
 
 
+=======
+                        <key>test_key</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
 </graphs>
 </zabbix_export>
