@@ -8,8 +8,10 @@ for (( i = 0 ; i < ${#lines[@]} ; i++)); do
 echo -e "$reverse Please Enter Item Name for key,${lines[$i]} $NC";
 read item_name;
 
+
+
 ### check if there is an item with the same item name
-check_item=$( sed -n '/[<]item[>]/,/[</]item[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)' template  |grep -w "$item_name" | grep -v -e '^[[:space:]]*$ ')
+check_item=$( sed -n '/[<]item[>]/,/[</]item[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)'  |grep -Fx  "$item_name")
 
  while [[  "$check_item" != ""  ]]   ;do
 
@@ -18,11 +20,10 @@ $red This Item is already Created $NC ";
 
 echo -e "$reverse Please Enter Item Name for key,${lines[$i]} $NC";
 read item_name;
-
-check_item=$( sed -n '/[<]item[>]/,/[</]item[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)' template  |grep -w "$item_name" | grep -v -e '^[[:space:]]*$ ')
+check_item=$( sed -n '/[<]item[>]/,/[</]item[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)'   |grep -Fx  "$item_name" )
 
 done
-
+##############
 now=$(date +"%Y%m%d");
 
 item="

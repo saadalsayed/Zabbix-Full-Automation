@@ -5,6 +5,25 @@
 echo -e  "$reverse Please enter Graph Name $NC"
 read graph_name;
 
+###check if a graph created with the same name
+
+check_item=$(sed -n '/[<]graph[>]/,/[</]graph[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)'  |grep -Fx   "$graph_name"  );
+
+
+ while [[  "$check_item" != ""  ]]   ;do
+
+echo -e  "$red This graph name is already taken  $NC ";
+
+echo -e "$reverse Please Enter a new graph name,${lines[$i]} $NC";
+read graph_name;
+check_item=$(sed -n '/[<]graph[>]/,/[</]graph[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)'  |grep -Fx "$graph_name" );
+
+
+done
+
+
+
+############
 ## Create Keys 
 
 IFS=$'\n' read -d '' -r -a lines <  /zabbix/zabbix/files/service/keys_only      # read key file ${#lines[@]} ==> number fo lines in file
@@ -112,16 +131,11 @@ graph="
 
 #echo "$graph";
 
-if  grep  "graph_name" template  ; then
-         echo "
-$red This Item is already Created $NC";
-         rm -rf tmp.file;
 
-else
-        echo " $graph" > files/graph_file;
-  	echo " $graph" >> logs/graphs/$now; #logfile 
-        sed -i  -e'/^<graphs>/ { r files/graph_file' -e '; :L; n; bL;}'  template;
-        echo "
+echo " $graph" > files/graph_file;
+echo " $graph" >> logs/graphs/$now; #logfile 
+sed -i  -e'/^<graphs>/ { r files/graph_file' -e '; :L; n; bL;}'  template;
+echo "
 	             
  __       _                                         __                  
 /__ __ _ |_)|_  _    |_  _     _    |_  _  _ __    /   __ _  _ _|_ _  _|
@@ -129,5 +143,4 @@ else
 
 
  ";
-	 rm -rf tmp.file;
-fi
+rm -rf tmp.file;
