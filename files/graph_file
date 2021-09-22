@@ -1,6 +1,6 @@
  
 <graph>
-            <name>fancy</name>
+            <name>test graph</name>
             <width>900</width>
             <height>200</height>
             <yaxismin>0.0000</yaxismin>
@@ -27,7 +27,7 @@
                     <type>0</type>
                     <item>
                         <host>test</host>
-                        <key>curr_trans_accepted_new_service</key>
+                        <key>curr_trans_accepted_ahmed_alaa</key>
                     </item>
                </graph_item>
  
@@ -35,13 +35,13 @@
               <graph_item>
                     <sortorder>1</sortorder>
                     <drawtype>0</drawtype>
-                    <color>00AA00</color>
+                    <color>0000EE</color>
                     <yaxisside>0</yaxisside>
                     <calc_fnc>2</calc_fnc>
                     <type>0</type>
                     <item>
                         <host>test</host>
-                        <key>curr_trans_refused_new_service</key>
+                        <key>curr_trans_refused_ahmed_alaa</key>
                     </item>
                </graph_item>
   

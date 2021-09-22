@@ -1,10 +1,10 @@
  
 <item>
-                    <name>refused service</name>
+                    <name>refused testing</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>curr_trans_refused_new_service</key>
+                    <key>curr_trans_refused_ahmed_alaa</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>

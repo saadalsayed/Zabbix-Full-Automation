@@ -21,84 +21,6 @@
             <items>
  
 <item>
-                    <name>refused testing</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <snmp_oid/>
-                    <key>curr_trans_refused_ahmed_alaa</key>
-                    <delay>30s</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications/>
-                    <valuemap/>
-                    <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
-</item>
- 
- 
-<item>
-                    <name>tes</name>
-                    <type>0</type>
-                    <snmp_community/>
-                    <snmp_oid/>
-                    <key>curr_trans_accepted_ahmed_alaa</key>
-                    <delay>30s</delay>
-                    <history>90d</history>
-                    <trends>365d</trends>
-                    <status>0</status>
-                    <value_type>3</value_type>
-                    <allowed_hosts/>
-                    <units/>
-                    <snmpv3_contextname/>
-                    <snmpv3_securityname/>
-                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                    <snmpv3_authpassphrase/>
-                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                    <snmpv3_privpassphrase/>
-                    <params/>
-                    <ipmi_sensor/>
-                    <authtype>0</authtype>
-                    <username/>
-                    <password/>
-                    <publickey/>
-                    <privatekey/>
-                    <port/>
-                    <description/>
-                    <inventory_link>0</inventory_link>
-                    <applications/>
-                    <valuemap/>
-                    <logtimefmt/>
-                    <preprocessing/>
-                    <jmx_endpoint/>
-                    <master_item/>
-</item>
- 
- 
-<item>
                     <name>122es</name>
                     <type>0</type>
                     <snmp_community/>
@@ -1518,46 +1440,6 @@
  
 
 	<trigger>
-            <expression>{test:curr_trans_refused_ahmed_alaa.last()}&gt;10</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
-            <name>refused trigger</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>3</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>0</manual_close>
-            <dependencies/>
-            <tags/>
-	</trigger>
-
- 
- 
-
-	<trigger>
-            <expression>{test:curr_trans_accepted_ahmed_alaa.last()}=5468</expression>
-            <recovery_mode>0</recovery_mode>
-            <recovery_expression/>
-            <name>accepted triger</name>
-            <correlation_mode>0</correlation_mode>
-            <correlation_tag/>
-            <url/>
-            <status>0</status>
-            <priority>4</priority>
-            <description/>
-            <type>0</type>
-            <manual_close>0</manual_close>
-            <dependencies/>
-            <tags/>
-	</trigger>
-
- 
- 
-
-	<trigger>
             <expression>{test:curr_trans_refused_new_service.last()}&gt;9012</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
@@ -1683,56 +1565,6 @@
 
 
 <graphs>
- 
-<graph>
-            <name>test graph</name>
-            <width>900</width>
-            <height>200</height>
-            <yaxismin>0.0000</yaxismin>
-            <yaxismax>100.0000</yaxismax>
-            <show_work_period>1</show_work_period>
-            <show_triggers>1</show_triggers>
-            <type>0</type>
-            <show_legend>1</show_legend>
-            <show_3d>0</show_3d>
-            <percent_left>0.0000</percent_left>
-            <percent_right>0.0000</percent_right>
-            <ymin_type_1>0</ymin_type_1>
-            <ymax_type_1>0</ymax_type_1>
-            <ymin_item_1>0</ymin_item_1>
-            <ymax_item_1>0</ymax_item_1>
-            <graph_items>
-		 
-              <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>BB0000</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>test</host>
-                        <key>curr_trans_accepted_ahmed_alaa</key>
-                    </item>
-               </graph_item>
- 
- 
-              <graph_item>
-                    <sortorder>1</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>0000EE</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>test</host>
-                        <key>curr_trans_refused_ahmed_alaa</key>
-                    </item>
-               </graph_item>
-  
-            </graph_items>
-</graph>
-
  
 <graph>
             <name>asd</name>

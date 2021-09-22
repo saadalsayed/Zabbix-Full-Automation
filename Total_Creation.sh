@@ -10,14 +10,13 @@ NC='\033[0m';
 
 
 now=$(date +"%Y%m%d");
-echo "" > key_names;	#delete any previous keys
+rm -rf  key_names;	#delete any previous keys
 cp -r template  backup-template/item/$now-$item_name; #backupfile
 
 
 ########################
 #### get Template name from template file
 Template_name=$(grep -oP '(?<=<template>).*(?=</template>)' template);
-echo "$Template_name ";
 ########################
 
 . /zabbix/zabbix/Create_item.sh 
@@ -27,8 +26,8 @@ echo "$Template_name ";
 ############################   Graph Creation 		###############################################
 #######################################################################################################
 
-echo "
-	Would you like to Create a graph for the Predefined keys y or n ?
+echo -e  "
+$reverse Would you like to Create a graph for the Predefined keys y or n ? $NC
 
 "
 read response;
@@ -45,8 +44,8 @@ fi
 ###################### Create Triggers   ################################
 ###################################################################### 
 
-echo "
-        Would you like to Create a Trigger y or n ?
+echo -e "
+$reverse Would you like to Create a Trigger y or n ? $NC
 
 "
 read trigger_response;

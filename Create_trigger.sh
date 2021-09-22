@@ -7,7 +7,7 @@ IFS=$'\n' read -d '' -r -a lines < /zabbix/zabbix/files/service/keys_only    # r
 
 for (( i = 0 ; i < ${#lines[@]} ; i++)); do
 
-echo "$reverse Please Enter Trigger Name for key ${lines[$i]} $NC ";
+echo -e "$reverse Please Enter Trigger Name for key ${lines[$i]} $NC ";
 read trigger_name;
 ########################
 ########################
@@ -136,7 +136,7 @@ check=$(sed -n '/[<]triggers[>]/,/[</]triggers[>]/p' template |   grep -oP '(?<=
 ########################
 #Copy triger XML to template file if not created before
   if [[ $check == "{$Template_name:${lines[$i]}.last()}$value$amount" ]] ; then
- 	 echo " 
+ 	 echo -e  " 
 $red This trigger is already Created Before With the same Expression $NC";
    else
  	echo " $trigger " > files/trigger_file;

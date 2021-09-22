@@ -38,10 +38,11 @@ echo -e  "
 
 ##### backup orrabix file 
 now=$(date +"%Y%m%d");
-file_check=$(ls /opt/orabbix/conf/backup/ | grep $now-query_fe.prop );
-if [[  $file_check == "" ]]; then
-cp /opt/orabbix/conf/query_fe.props /opt/orabbix/conf/backup/$now-query_fe.props
-fi
+#scp root@10.201.11.7:/opt/orabbix/conf/query_fe.props /opt/orabbix/conf/query_fe.props;
+#file_check=$(ls /opt/orabbix/conf/backup/ | grep $now-query_fe.props );
+#if [[  $file_check == "" ]]; then
+#cp /opt/orabbix/conf/query_fe.props /opt/orabbix/conf/backup/$now-query_fe.props
+#fi
 
 ####### Delete any previous data for keys | queries 
 rm -rf  files/service/keys.prob
@@ -50,8 +51,8 @@ rm -rf  files/service/query
 rm -rf  files/service/keys_only
 
 ############# Create query and Key 
-cont=n
-while [ "$cont" != "y" ]
+cont=y
+while [ "$cont" == "y" ]
 do
 echo -e  "$reverse
 could you please enter service id 
@@ -91,7 +92,7 @@ refused_query="$refused_service_name"".Query=select  count(distinct(ct.UTRNNO)) 
 echo $refused_query >> files/service/query
 echo "################################################################" >> files/service/query 
 echo -e "$reverse
-do you wanna exit y or n
+do you wanna create another service y or n
 $NC"
 read cont
 done
@@ -119,8 +120,9 @@ read response
 
 if [[ $response == "y"  ]] ; then
 
-/zabbix/zabbix/Total_Creation.sh 
+. /zabbix/zabbix/Total_Creation.sh 
 fi
+#scp /opt/orabbix/conf/query_fe.props root@10.201.11.7:/opt/orabbix/conf/query_fe.props ;
 
 
 #echo "your query is ready in file called query " 

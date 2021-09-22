@@ -1,0 +1,23 @@
+---
+- name: test yml file
+<<<<<<< HEAD
+  hosts: zabbix-server
+=======
+  hosts: all
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
+  tasks:
+  - name: Create a new Zabbix template linked to groups, macros and templates
+    local_action:
+      module: zabbix_template
+      server_url: http://10.201.11.7/zabbix
+      login_user: Admin
+      login_password: zabbix
+<<<<<<< HEAD
+      template_name: New_temp
+=======
+      template_name: test
+>>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
+      template_groups : Templates
+      state: present
+
+...

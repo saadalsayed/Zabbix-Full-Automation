@@ -1,9 +1,8 @@
 #!/bin/bash
-<<<<<<< HEAD
 ################
 ### enter Graph Name
 
-echo "$reverse Please enter Graph Name $NC"
+echo -e  "$reverse Please enter Graph Name $NC"
 read graph_name;
 
 ## Create Keys 
@@ -83,17 +82,6 @@ keys=$( cat tmp.file);
 
 ##############
 ### Create The whole graph 
-=======
-clear;
-echo "Please enter Graph Name"
-read graph_name;
-
-
-echo "Please enter the key Name"
-read key_name;
-
-now=$(date +"%Y%m%d");
->>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
 
 
 graph="
@@ -115,7 +103,6 @@ graph="
             <ymin_item_1>0</ymin_item_1>
             <ymax_item_1>0</ymax_item_1>
             <graph_items>
-<<<<<<< HEAD
 		$keys 
             </graph_items>
 </graph>
@@ -143,32 +130,4 @@ else
 
  ";
 	 rm -rf tmp.file;
-=======
-                <graph_item>
-                    <sortorder>0</sortorder>
-                    <drawtype>0</drawtype>
-                    <color>1A7C11</color>
-                    <yaxisside>0</yaxisside>
-                    <calc_fnc>2</calc_fnc>
-                    <type>0</type>
-                    <item>
-                        <host>test</host>
-                        <key>$key_name</key>
-                    </item>
-                </graph_item>
-            </graph_items>
-</graph>
-";
-if  grep  "graph_name" template  ; then
-         echo "This Item is already Created";
-else
-        echo " $graph" > graph_file;
-         cp -r template  backup-template/graph/$now-$graph_name; #backupfile
-  	echo " $graph" > logs/graphs/$now-$graph_name; #logfile 
-        sed -i  -e'/^<graphs>/ { r graph_file' -e '; :L; n; bL;}'  template;
-        echo "
-		Graph Has been added to Template File
-	              Please Run impot.yml";
->>>>>>> 0909eb507c2ae42777f4bd5d0c77791de12459b8
 fi
-

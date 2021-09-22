@@ -1,0 +1,23 @@
+---
+- name : export template 
+  hosts: all
+  tasks :
+#  - name: Get Zabbix template as XML
+#    community.zabbix.zabbix_template:
+#      server_url: "http://10.201.11.7"
+#      login_user: Admin
+#      login_password: zabbix
+#      template_name: test
+#      format: xml
+#      omit_date: no
+#    register: template_json
+  - name: Dump Zabbix template
+    local_action:
+      module: zabbix_template
+      server_url: http://10.201.11.7/zabbix
+      login_user: Admin
+      login_password: zabbix
+      template_name: Template_Oracle
+      state: dump
+    register: template_dump
+...
