@@ -1,0 +1,20 @@
+ 
+
+	<trigger>
+            <expression>{test:test_key.last()}=1000</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>saad trigger</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+	</trigger>
+
+ 

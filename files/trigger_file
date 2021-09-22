@@ -1,0 +1,20 @@
+ 
+
+	<trigger>
+            <expression>{test:curr_trans_refused_ahmed_alaa.last()}&gt;10</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>refused trigger</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>3</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+	</trigger>
+
+ 

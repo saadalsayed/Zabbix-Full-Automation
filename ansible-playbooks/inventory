@@ -1,0 +1,2 @@
+[zabbix-server]
+10.201.11.7 ansible_user="{{user}}" ansible_ssh_pass="{{pass}}"
