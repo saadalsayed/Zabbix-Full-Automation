@@ -7,6 +7,8 @@ for (( i = 0 ; i < ${#lines[@]} ; i++)); do
 
 echo -e "$reverse Please Enter Item Name for key,${lines[$i]} $NC";
 read item_name;
+
+### check if there is an item with the same item name
 check_item=$( sed -n '/[<]item[>]/,/[</]item[>]/p' template |   grep -oP '(?<=<name>).*(?=</name>)' template  |grep -w "$item_name" | grep -v -e '^[[:space:]]*$ ')
 
  while [[  "$check_item" != ""  ]]   ;do
