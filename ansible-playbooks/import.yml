@@ -5,8 +5,8 @@
    - vars/zabbix.yml
   hosts: zabbix-server
   tasks:
-#  - name: restart orabbix 
- #   shell: /etc/init.d/orabbix restart
+  - name: restart orabbix 
+    shell: /etc/init.d/orabbix restart
 
   - name: Import Zabbix templates from XML
     local_action:

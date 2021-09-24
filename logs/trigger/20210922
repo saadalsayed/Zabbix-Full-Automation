@@ -1,0 +1,40 @@
+ 
+
+	<trigger>
+            <expression>{test:curr_trans_accepted_devops_test.last()}=765</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>accepted devops trigger</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>4</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+	</trigger>
+
+ 
+ 
+
+	<trigger>
+            <expression>{test:curr_trans_refused_devops_test.last()}&gt;67</expression>
+            <recovery_mode>0</recovery_mode>
+            <recovery_expression/>
+            <name>hf</name>
+            <correlation_mode>0</correlation_mode>
+            <correlation_tag/>
+            <url/>
+            <status>0</status>
+            <priority>5</priority>
+            <description/>
+            <type>0</type>
+            <manual_close>0</manual_close>
+            <dependencies/>
+            <tags/>
+	</trigger>
+
+ 

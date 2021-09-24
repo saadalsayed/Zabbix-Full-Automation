@@ -1,10 +1,10 @@
  
 <item>
-                    <name>hello item</name>
+                    <name>refused devops</name>
                     <type>0</type>
                     <snmp_community/>
                     <snmp_oid/>
-                    <key>curr_trans_refused_ahmed_alaa</key>
+                    <key>curr_trans_refused_devops_test</key>
                     <delay>30s</delay>
                     <history>90d</history>
                     <trends>365d</trends>
