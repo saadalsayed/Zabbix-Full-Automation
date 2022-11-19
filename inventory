@@ -1,4 +1,4 @@
 [localhost]
 localhost   ansible_connection="local"
 [zabbix-server]
-10.201.11.7 ansible_user=root ansible_ssh_pass=root123
+zabbix-server
